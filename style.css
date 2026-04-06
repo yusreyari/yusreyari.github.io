@@ -27,4 +27,111 @@
     color: #666;
     margin-top: 0.3rem;
   }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
   
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background: #f9f6f1;
+    color: #1a1a1a;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 4rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  header h1 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  
+  header nav {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #888;
+  }
+  
+  header nav a {
+    color: #888;
+    text-decoration: none;
+    margin: 0 1rem;
+  }
+  
+  header nav a:hover {
+    color: #1a1a1a;
+  }
+  
+  .post-list {
+    list-style: none;
+  }
+  
+  .post-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 1.2rem 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .post-list a {
+    color: #1a1a1a;
+    text-decoration: none;
+    font-size: 1.1rem;
+  }
+  
+  .post-list a:hover {
+    text-decoration: underline;
+  }
+  
+  .post-list .date {
+    font-size: 0.8rem;
+    color: #999;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+    margin-left: 1rem;
+  }
+  
+  .post-body h2 {
+    font-size: 2rem;
+    font-weight: normal;
+    margin-bottom: 0.5rem;
+  }
+  
+  .post-body .date {
+    font-size: 0.8rem;
+    color: #999;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    display: block;
+  }
+  
+  .post-body p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: #333;
+  }
+  
+  footer {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid #ddd;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #aaa;
+    letter-spacing: 0.05em;
+  }
