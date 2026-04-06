@@ -46,9 +46,15 @@
   }
   
   .post-content p {
-    font-size: 1rem;
-    line-height: 1.8;
+    font-size: 0.85rem;
+    line-height: 1.7;
     color: #333;
+  }
+  
+  .post-content img {
+    width: 40%;
+    margin-top: 1rem;
+    border-radius: 4px;
   }
   
   .post-content.open {
