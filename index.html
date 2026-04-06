@@ -21,10 +21,16 @@
     </ul>
   </main>
   <script>
-    function toggle(el) {
-      const content = el.nextElementSibling;
-      content.classList.toggle('open');
-    }
+    document.querySelectorAll('.post-date').forEach(function(date) {
+      date.addEventListener('click', function() {
+        var content = this.nextElementSibling;
+        if (content.style.display === 'none') {
+          content.style.display = 'block';
+        } else {
+          content.style.display = 'none';
+        }
+      });
+    });
   </script>
 </body>
 </html>
