@@ -3,52 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yusuf's Blog</title>
+  <title>Yusuf</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>Yusuf's Blog</h1>
-    <p>Thoughts, ideas, and things I'm learning.</p>
-  </header>
-  <main>
-    <h2>Welcome</h2>
-    <p>This is my first website, built from scratch.</p>
-    <main>
-        <article>
-          <h2><a href="post1.html">My First Post</a></h2>
-          <p class="date">April 2, 2026</p>
-          <p>I built this website completely from scratch using HTML and CSS.</p>
-        </article>
-      </main>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yusuf's Blog</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <h1>Yusuf's Blog</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="#">About</a>
-    </nav>
+    <h1>Yusuf</h1>
   </header>
   <main>
     <ul class="post-list">
       <li>
-        <a href="post1.html">My First Post</a>
-        <span class="date">Apr 6, 2026</span>
+        <span class="post-date" onclick="toggle(this)">April 6, 2026</span>
+        <div class="post-content">
+          <p>This is my first blog post. I built this website completely from scratch using HTML and CSS. No website builders, no WordPress — just code. This is the beginning of something.</p>
+        </div>
       </li>
     </ul>
   </main>
-  <footer>
-    &copy; 2026 Yusuf
-  </footer>
+  <script>
+    function toggle(el) {
+      const content = el.nextElementSibling;
+      content.classList.toggle('open');
+    }
+  </script>
 </body>
 </html>

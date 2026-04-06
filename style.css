@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -5,133 +6,53 @@
   }
   
   body {
-    font-family: Georgia, serif;
-    background: #fafafa;
-    color: #222;
-    max-width: 680px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
-  }
-  
-  header {
-    border-bottom: 1px solid #ddd;
-    margin-bottom: 2rem;
-    padding-bottom: 1rem;
-  }
-  
-  header h1 {
-    font-size: 1.8rem;
-  }
-  
-  header p {
-    color: #666;
-    margin-top: 0.3rem;
-  }
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
     font-family: Georgia, 'Times New Roman', serif;
-    background: #f9f6f1;
+    background: #ffffff;
     color: #1a1a1a;
-    max-width: 680px;
+    max-width: 600px;
     margin: 0 auto;
-    padding: 3rem 1.5rem;
-  }
-  
-  header {
-    text-align: center;
-    margin-bottom: 4rem;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid #ddd;
+    padding: 4rem 2rem;
   }
   
   header h1 {
-    font-size: 2.5rem;
+    font-size: 1.2rem;
     font-weight: normal;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-  }
-  
-  header nav {
-    margin-top: 1rem;
-    font-size: 0.85rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: #888;
-  }
-  
-  header nav a {
-    color: #888;
-    text-decoration: none;
-    margin: 0 1rem;
-  }
-  
-  header nav a:hover {
-    color: #1a1a1a;
+    margin-bottom: 3rem;
   }
   
   .post-list {
     list-style: none;
+    padding-left: 2rem;
   }
   
   .post-list li {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    padding: 1.2rem 0;
-    border-bottom: 1px solid #eee;
+    margin-bottom: 0.6rem;
   }
   
-  .post-list a {
+  .post-date {
+    font-size: 0.95rem;
     color: #1a1a1a;
-    text-decoration: none;
-    font-size: 1.1rem;
+    cursor: pointer;
+    font-family: Georgia, serif;
   }
   
-  .post-list a:hover {
+  .post-date:hover {
     text-decoration: underline;
   }
   
-  .post-list .date {
-    font-size: 0.8rem;
-    color: #999;
-    letter-spacing: 0.05em;
-    white-space: nowrap;
-    margin-left: 1rem;
+  .post-content {
+    display: none;
+    padding-left: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
   
-  .post-body h2 {
-    font-size: 2rem;
-    font-weight: normal;
-    margin-bottom: 0.5rem;
-  }
-  
-  .post-body .date {
-    font-size: 0.8rem;
-    color: #999;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    margin-bottom: 2rem;
-    display: block;
-  }
-  
-  .post-body p {
-    font-size: 1.1rem;
+  .post-content p {
+    font-size: 1rem;
     line-height: 1.8;
-    margin-bottom: 1.5rem;
     color: #333;
   }
   
-  footer {
-    margin-top: 4rem;
-    padding-top: 2rem;
-    border-top: 1px solid #ddd;
-    text-align: center;
-    font-size: 0.8rem;
-    color: #aaa;
-    letter-spacing: 0.05em;
+  .post-content.open {
+    display: block;
   }
