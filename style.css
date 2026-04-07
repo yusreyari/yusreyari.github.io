@@ -6,9 +6,10 @@
   
   body {
     font-family: Georgia, 'Times New Roman', serif;
-    background: #f8f8f8;    color: #1a1a1a;
-    max-width: 100%;
-    padding: 4rem 5rem;
+    background: #fdfdfd;
+    color: #1a1a1a;
+    max-width: 400px;
+    padding: 4rem 2rem;
   }
   
   header h1 {
