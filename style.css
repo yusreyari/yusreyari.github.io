@@ -63,6 +63,9 @@ header h1 {
   line-height: 1.7;
   color: #333;
 }
+.post-content {
+  max-width: 400px;
+}
 
 .post-content img {
   width: 100%;
