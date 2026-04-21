@@ -12,24 +12,43 @@ function ask(question) {
 }
 
 async function main() {
+  const type = await ask('Writing or Photos? (w/p): ');
   const date = await ask('Date (e.g. April 21, 2026): ');
-  const text = await ask('Write your post: ');
-  const image = await ask('Image file name (press enter to skip): ');
+  
+  let postHTML = '';
 
-  const imgHTML = image 
-    ? `\n    <img src="${image}" alt="photo" style="width: 300px; margin-top: 1rem; display: block;">` 
-    : '';
-
-  const newPost = `
-      <li>
-        <span class="post-date">${date}</span>
-        <div class="post-content" style="display:none;">
-          <p>${text}</p>${imgHTML}
-        </div>
-      </li>`;
+  if (type.toLowerCase() === 'w') {
+    const text = await ask('Write your post: ');
+    const image = await ask('Image file name (press enter to skip): ');
+    const imgHTML = image
+      ? `\n    <img src="${image}" alt="photo" style="width: 300px; margin-top: 1rem; display: block;">`
+      : '';
+    postHTML = `
+        <li>
+          <span class="post-date">${date}</span>
+          <div class="post-content" style="display:none;">
+            <p>${text}</p>${imgHTML}
+          </div>
+        </li>`;
+  } else {
+    const image = await ask('Image file name: ');
+    postHTML = `
+        <li>
+          <span class="post-date">${date}</span>
+          <div class="post-content" style="display:none;">
+            <img src="${image}" alt="photo" style="width: 100%; margin-top: 1rem; display: block;">
+          </div>
+        </li>`;
+  }
 
   let html = fs.readFileSync('index.html', 'utf8');
-  html = html.replace('</ul>', newPost + '\n    </ul>');
+  
+  if (type.toLowerCase() === 'w') {
+    html = html.replace('</ul>\n    </div>\n\n    <div class="column"', postHTML + '\n      </ul>\n    </div>\n\n    <div class="column"');
+  } else {
+    html = html.replace('</ul>\n    </div>\n  </div>', postHTML + '\n      </ul>\n    </div>\n  </div>');
+  }
+
   fs.writeFileSync('index.html', html);
 
   execSync('git add .');
