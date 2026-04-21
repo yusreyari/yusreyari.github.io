@@ -8,6 +8,7 @@ body {
   font-family: Georgia, 'Times New Roman', serif;
   background: #fdfdfd;
   color: #1a1a1a;
+  max-width: 400px;
   padding: 4rem 2rem;
 }
 
@@ -15,20 +16,6 @@ header h1 {
   font-size: 1.2rem;
   font-weight: normal;
   margin-bottom: 3rem;
-}
-
-.columns {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-}
-
-.column-title {
-  font-size: 0.75rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: #999;
-  margin-bottom: 1.5rem;
 }
 
 .post-list {
@@ -53,9 +40,10 @@ header h1 {
 
 .post-content {
   display: none;
-  padding-left: 2rem;
+  padding-left: 1rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  max-width: 100%;
 }
 
 .post-content p {
@@ -63,57 +51,9 @@ header h1 {
   line-height: 1.7;
   color: #333;
 }
-.post-content {
-  max-width: 400px;
-}
 
 .post-content img {
   width: 100%;
   margin-top: 1rem;
   border-radius: 4px;
-}
-
-@media (max-width: 768px) {
-  .columns {
-    display: block;
-  }
-
-  .column {
-    display: none;
-  }
-
-  .column.active {
-    display: block;
-  }
-
-  .mobile-toggle {
-    display: flex;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-  }
-
-  .toggle-btn {
-    font-size: 0.85rem;
-    color: #999;
-    cursor: pointer;
-    background: none;
-    border: none;
-    font-family: Georgia, serif;
-    padding: 0;
-  }
-
-  .toggle-btn.active {
-    color: #1a1a1a;
-    text-decoration: underline;
-  }
-}
-
-@media (min-width: 769px) {
-  .mobile-toggle {
-    display: none;
-  }
-
-  .column {
-    display: block !important;
-  }
 }
